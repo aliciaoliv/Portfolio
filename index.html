@@ -1,33 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Alicia</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alicia Cavalcante de Oliveira | Portfólio</title>
 </head>
 <body>
-    <header> 
-        <div class="navegacao"> 
-            <span> Alicia Oliveira </span>
-            <nav class="menu"> 
-                <a href="index.html"> Apresentação </a>
-                <a href="projetos.html"> Projetos </a>
-                <a href="contato.html"> Contato </a> 
+  <header>
+    <div class="logo">Nome</div>
+    <nav>
+      <ul>
+        <li><a href="#apresentacao">Apresentação</a></li>
+        <li><a href="#projetos-api">Projetos API</a></li>
+        <li><a href="#profissionais-pessoais">Profissionais e Pessoais</a></li>
+        <li><a href="#informacoes-curriculares">Informações Curriculares</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="apresentacao">
+      <div class="perfil-col-esquerda">
+        <figure>
+          <img src="foto-perfil.jpg" alt="Foto recente e profissional de Alicia Cavalcante de Oliveira">
+          <figcaption>foto recente e profissional</figcaption>
+        </figure>
+      </div>
+      <div class="perfil-col-direita">
+        <p class="tagline">// bibliotecária + dev</p>
+        <h1>Alicia Cavalcante de Oliveira</h1>
+        <h2>Organizo informação. Construo software.</h2>
+        <p class="bio">Bibliotecária de formação, cursando Desenvolvimento de Software.</p>
+        <a href="#projetos-api" class="btn-projetos">Ver projetos</a>
+        <!-- Dicionário Python -->
+        <pre><code>eu = {
+    "formacao": "biblioteconomia",
+    "agora": "dev de software",
+    "gosto": "organizar"
+}</code></pre>
+      </div>
+    </section>
+    <hr>
+    <section class="informacoes-rapidas">
+      <div class="coluna-objetivo">
+        <h3>Objetivo acadêmico</h3>
+        <p>Concluir a formação em desenvolvimento de software e aprofundar estudos em APIs, bancos de dados e organização da informação.</p>
+      </div>
+      <div class="coluna-objetivo">
+        <h3>Objetivo profissional</h3>
+        <p>Atuar como desenvolvedora unindo o olhar de bibliotecária à construção de sistemas: dados bem estruturados, busca eficiente e acessibilidade.</p>
+      </div>
+      <div class="coluna-interesses">
+        <h3>Áreas de interesse</h3>
+        <div class="card-interesses">
+          <h4>Interesses.</h4>
+          <ol>
+            <li>Desenvolvimento web—Back-end.</li>
+            <li>Python—Automação.</li>
+            <li>Metadados—Catalogação.</li>
+            <li>Bibliotecas digitais.</li>
+          </ol>
         </div>
-    </header>
-<main>
-    <div class="sobre-mim">
-        <p> Aqui vai um texto sobre mim </p>
-    </div>
-    <div class="cod">
-        <p> def eu(): 
-            return "biblioteconomia", "dev de software", "informação", "tecnologia"
-        </p>
-    </div>
-    <button> Contato </button>
-</main>
+      </div>
+    </section>
+  </main>
+  <footer>
+  </footer>
 </body>
-<footer>
-    
-</footer>
 </html>
