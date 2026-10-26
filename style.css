@@ -1,0 +1,386 @@
+/* geral e paleta de cores */
+:root {
+  --cor-fundo-pagi: #F6F1EC;       
+  --cor-fundo-cartao: #EFE7DC;     
+  --cor-texto: #3A2A20;            
+  --cor-destaque: #CC5200;        
+  --cor-destaque-escuro: #A84407;  
+  --cor-codigo: #E5C4AE;           
+  --cor-borda: #D4C5B3;            
+  --cor-linhas-divisorias: #C2B29F;
+  --fonte-serifa: "Georgia", "Times New Roman", serif;
+  --fonte-mono: "Courier New", Courier, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--cor-fundo-pagi);
+  color: var(--cor-texto);
+  font-family: var(--fonte-serifa);
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;           
+  border: 1px solid var(--cor-destaque);
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  background-color: var(--cor-fundo-pagi);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--cor-destaque);
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;                
+  list-style: none;
+  gap: 10px;
+}
+
+header nav a {
+  display: inline-block;           
+  text-decoration: none;
+  color: #ffffff;
+  background-color: var(--cor-destaque);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: opacity 0.2s ease;
+}
+
+header nav a:hover {
+  opacity: 0.85;
+}
+
+header nav a.active {             
+  background-color: var(--cor-destaque-escuro);
+}
+
+/* linha divisória geral (a da página de projetos continua valendo) */
+hr {
+  border: 0;
+  border-top: 1px solid var(--cor-linhas-divisorias);
+  margin: 56px 0 32px;
+}
+
+#apresentacao {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 56px;
+  align-items: start;
+  margin-top: 48px;
+}
+
+#apresentacao figure img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#apresentacao h1 {
+  font-size: 2rem;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+#apresentacao h2 {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+#apresentacao .bio {
+  max-width: 52ch;
+  margin-bottom: 26px;
+}
+
+.btn-projetos {
+  display: inline-block;
+  background-color: var(--cor-destaque);
+  color: #ffffff;
+  text-decoration: none;
+  font-family: var(--fonte-mono);
+  font-size: 0.9rem;
+  padding: 12px 26px;
+  border-radius: 999px;
+  transition: opacity 0.2s ease;
+}
+
+.btn-projetos:hover {
+  opacity: 0.85;
+}
+
+#apresentacao pre {
+  display: block;
+  max-width: 340px;
+  margin-top: 30px;
+  padding: 16px 20px;
+  background-color: var(--cor-codigo);
+  border-radius: 10px;
+  font-family: var(--fonte-mono);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  overflow-x: auto;
+}
+
+.informacoes-rapidas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+}
+
+.informacoes-rapidas h3 {
+  font-family: var(--fonte-mono);
+  font-size: 0.85rem;
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+
+.card-interesses {
+  background-color: var(--cor-fundo-cartao);
+  border: 1px solid var(--cor-borda);
+  border-radius: 4px;
+  padding: 18px 22px;
+  font-size: 0.95rem;
+}
+
+.card-interesses h4 {
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.card-interesses ol {
+  padding-left: 1.4rem;
+}
+
+#projetos-api h1 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 10px;
+  font-family: var(--fonte-mono);
+}
+
+#projetos-api hr {
+  border: 0;
+  border-top: 1px solid var(--cor-linhas-divisorias);
+  margin-bottom: 30px;
+}
+
+.grid-projetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-bottom: 60px;
+}
+
+/* style da ficha catalografica */
+.ficha-projeto {
+  background-color: var(--cor-fundo-cartao);
+  border: 1px solid var(--cor-borda);
+  border-radius: 4px;
+  padding: 25px 25px 15px 25px;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 380px;
+  position: relative;
+}
+
+/* Cabeçalho do Autor na Ficha */
+.ficha-autoria {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+/* Corpo da Ficha (Descrição Bibliográfica) */
+.ficha-corpo {
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+.ficha-corpo p {
+  margin-bottom: 6px;
+}
+
+.ficha-corpo .titulo-descricao {
+  text-indent: 15px;
+}
+
+.ficha-corpo .local-publicacao,
+.ficha-corpo .detalhes-fisicos {
+  text-indent: 15px;
+}
+
+.ficha-corpo .nota-projeto {
+  text-indent: 30px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.ficha-corpo a {
+  color: var(--cor-texto);
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+.ficha-corpo a:hover {
+  color: var(--cor-destaque);
+}
+
+/* Rodapé da Ficha e Assuntos */
+.ficha-rodape {
+  margin-top: 20px;
+}
+
+.ficha-rodape .assuntos {
+  font-size: 0.85rem;
+  margin-bottom: 25px;
+}
+
+/* Metadados da ficha catalografica */
+.metadados-ficha {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 0.75rem;
+  color: #666;
+  position: relative;
+  padding-top: 10px;
+}
+
+.nome-portfolio {
+  max-width: 40%;
+}
+
+/* Furo da ficha */
+.furo-cartao {
+  width: 16px;
+  height: 16px;
+  background-color: var(--cor-fundo-pagi);
+  border: 1px solid var(--cor-borda);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.codigo-status {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-family: var(--fonte-mono);
+}
+
+footer {
+  margin-top: 50px;
+}
+
+footer .texto-decorativo {
+  background-color: var(--cor-destaque);
+  color: #EFE7DC;
+  padding: 15px;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+  margin-bottom: 10px;
+}
+
+footer .copyright {
+  text-align: right;
+  font-size: 0.8rem;
+  color: var(--cor-destaque);
+  font-family: var(--fonte-mono);
+}
+
+@media (max-width: 820px) {
+  #apresentacao {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  #apresentacao figure {
+    max-width: 260px;
+  }
+
+  .informacoes-rapidas {
+    grid-template-columns: 1fr;
+  }
+}
+
+#contato h1 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 10px;
+  font-family: var(--fonte-mono);
+}
+
+#contato hr {
+  border: 0;
+  border-top: 1px solid var(--cor-linhas-divisorias);
+  margin: 0 0 30px;
+}
+
+.contato-conteudo {
+  max-width: 620px;
+  display: grid;
+  gap: 28px;
+}
+
+.chamada-contato {
+  border: 1px solid var(--cor-destaque);
+  border-radius: 10px;
+  padding: 18px 24px;
+  font-size: 1.25rem;
+}
+
+.contato-redes {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.contato-redes svg {
+  display: block;
+  width: 36px;
+  height: 36px;
+  fill: none;
+  stroke: var(--cor-destaque);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.email-contato {
+  border: 1px solid var(--cor-destaque);
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-family: var(--fonte-mono);
+  font-size: 0.9rem;
+  color: var(--cor-texto);
+  text-decoration: none;
+}
+
+.email-contato:hover {
+  color: var(--cor-destaque);
+}
