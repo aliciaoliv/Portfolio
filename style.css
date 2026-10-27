@@ -138,7 +138,8 @@ hr {
   font-family: var(--fonte-mono);
   font-size: 0.85rem;
   line-height: 1.6;
-  overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }
 
 .informacoes-rapidas {
@@ -230,7 +231,7 @@ hr {
   text-indent: 15px;
 }
 
-.ficha-corpo .nota-projeto {
+.ficha-corpo .link-projeto {
   text-indent: 30px;
   margin-top: 10px;
   font-size: 0.9rem;
