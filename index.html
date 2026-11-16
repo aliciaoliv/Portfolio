@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="script.js"></script>
   <link rel="stylesheet" href="style.css">
   <title>Alicia Cavalcante de Oliveira | Portfólio</title>
 </head>
@@ -28,25 +29,67 @@
       </div>
       <div class="perfil-col-direita">
         <h1>Alicia Cavalcante de Oliveira</h1>
-        <h2>Organizo informação. Aprendendo a construir softwares.</h2>
-        <p class="bio">Bibliotecária de formação, cursando Desenvolvimento de Software.</p>
+        <h2>Entre a organização da informação e o desenvolvimento de software</h2>
+        <p class="bio">Minha trajetória acadêmica e profissional conecta Biblioteconomia, Ciência da Informação e Desenvolvimento de Software. Transito entre a gestão de informações, o tratamento de dados e o desenvolvimento de aplicações, buscando compreender como diferentes conhecimentos e tecnologias podem contribuir para a criação de soluções digitais.</p>
         <a href="projetos API.html" class="btn-projetos">Ver projetos</a>
         <pre><code>def perfil(palavra):
-    eu = ["bibliotecária, "dev", "ciência da informação", "tecnologia"]
+    eu = ["bibliotecária", "dev", "ciência da informação", "tecnologia"]
     if palavra in eu:
         return True
     return False</code></pre>
       </div>
     </section>
     <hr>
+        <section id="sobre-mim" class="sobre-mim">
+      <h2 class="sobre-mim-titulo">Sobre mim</h2>
+
+      <div class="sobre-mim-conteudo">
+        <div class="sobre-mim-texto">
+          <p>Minha trajetória começou na Biblioteconomia, uma área que me apresentou diferentes formas de compreender, organizar e compartilhar o conhecimento. Durante minha formação na UNESP, tive a oportunidade de trabalhar com acervos, especialmente fotográficos, e conhecer de perto os processos envolvidos na preservação, representação e acesso à informação.</p>
+          <p>Com o tempo, minha curiosidade acabou me levando a outros caminhos. O interesse pelas tecnologias e pelas possibilidades de criar soluções digitais me aproximou do Desenvolvimento de Software, área na qual decidi continuar minha formação. Hoje, encontro no código uma nova maneira de explorar ideias, resolver problemas e construir coisas.</p>
+          <p>Fora dos estudos, sou apaixonada por animais, gosto de me perder entre histórias de ficção e fantasia e tenho uma boa companhia nas playlists de música pop. Também gosto de paisagens, flores e fotografias que conseguem guardar um pouco da beleza dos momentos cotidianos.</p>
+          <p class="fecho">Acredito que boa parte de quem somos está nas coisas que escolhemos observar, aprender e guardar pelo caminho. Talvez seja por isso que minha trajetória tenha encontrado espaço entre livros, fotografias, informações e linhas de código.</p>
+        </div>
+
+        <div class="carrossel" role="group" aria-roledescription="carrossel" aria-label="Fotografias pessoais">
+          <div class="carrossel-trilho" tabindex="0">
+            <!-- Quando tiver a foto, troque o div de cada item por:
+            <img src="imagens/nome.jpg" alt="Descrição da foto" loading="lazy" class="proporcao-retrato"> -->
+            <figure class="foto-registro carrossel-item">
+              <img src="imagens/fotocachorro.jpeg" loading="lazy" class="foto-reservada proporcao-retrato">
+              <figcaption>fig. 01 — no parque com um cachorro simpático</figcaption>
+            </figure>
+            <figure class="foto-registro carrossel-item">
+              <img src="imagens/praia.jpeg" loading="lazy" class="foto-reservada proporcao-retrato">
+              <figcaption>fig. 02 — por do sol na praia</figcaption>
+            </figure>
+            <figure class="foto-registro carrossel-item">
+              <div class="foto-reservada proporcao-retrato">Flores</div>
+              <figcaption>fig. 03 — legenda curta</figcaption>
+            </figure>
+            <figure class="foto-registro carrossel-item">
+              <div class="foto-reservada proporcao-retrato">Outro registro</div>
+              <figcaption>fig. 04 — legenda curta</figcaption>
+            </figure>
+          </div>
+
+          <div class="carrossel-controles">
+            <button type="button" class="carrossel-btn" data-direcao="-1" aria-label="Foto anterior">←</button>
+            <span class="carrossel-contador" aria-live="polite">1 / 4</span>
+            <button type="button" class="carrossel-btn" data-direcao="1" aria-label="Próxima foto">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
     <section class="informacoes-rapidas">
       <div class="coluna-objetivo">
         <h3>Objetivo acadêmico</h3>
-        <p>Concluir a formação em desenvolvimento de software.</p>
+        <p>Aprofundar minha formação em Desenvolvimento de Software e construir uma trajetória acadêmica voltada à pesquisa científica. Tenho como objetivo participar de projetos de iniciação científica e prosseguir na pós-graduação, com interesse em mestrado e doutorado, investigando possíveis diálogos entre tecnologia, desenvolvimento de sistemas e Ciência da Informação.</p>
       </div>
       <div class="coluna-objetivo">
         <h3>Objetivo profissional</h3>
-        <p>Atuar como desenvolvedora unindo o olhar de bibliotecária à construção de sistemas: dados bem estruturados, busca eficiente e acessibilidade.</p>
+        <p>Atuar no desenvolvimento de software, especialmente em soluções back-end e gestão de dados, integrando conhecimentos de tecnologia e Ciência da Informação. Busco construir aplicações eficientes, acessíveis e orientadas às necessidades dos usuários</p>
       </div>
       <div class="coluna-interesses">
         <h3>Áreas de interesse</h3>
