@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
   <link rel="stylesheet" href="style.css">
   <title>Alicia Cavalcante de Oliveira | Portfólio</title>
 </head>
@@ -30,14 +30,15 @@
       <div class="perfil-col-direita">
         <h1>Alicia Cavalcante de Oliveira</h1>
         <h2>Entre a organização da informação e o desenvolvimento de software</h2>
-        <p class="bio">Minha trajetória acadêmica e profissional conecta Biblioteconomia, Ciência da Informação e Desenvolvimento de Software. Transito entre a gestão de informações, o tratamento de dados e o desenvolvimento de aplicações, buscando compreender como diferentes conhecimentos e tecnologias podem contribuir para a criação de soluções digitais.</p>
+        <p class="bio">Minha trajetória acadêmica e profissional conecta Biblioteconomia e Desenvolvimento de Software. Transito entre a gestão de informações, o tratamento de dados e o desenvolvimento de aplicações, buscando compreender como diferentes conhecimentos e tecnologias podem contribuir para a criação de soluções digitais.</p>
         <a href="projetos API.html" class="btn-projetos">Ver projetos</a>
-        <pre><code>def perfil(palavra):
+        <a href="documentos/curriculo-alicia-cavalcante.pdf" class="btn-curriculo" download>Baixar currículo</a>
+      </div>
+      <pre><code>def perfil(palavra):
     eu = ["bibliotecária", "dev", "ciência da informação", "tecnologia"]
     if palavra in eu:
         return True
-    return False</code></pre>
-      </div>
+    return False </code></pre>
     </section>
     <hr>
         <section id="sobre-mim" class="sobre-mim">
@@ -45,34 +46,27 @@
 
       <div class="sobre-mim-conteudo">
         <div class="sobre-mim-texto">
-          <p>Minha trajetória começou na Biblioteconomia, uma área que me apresentou diferentes formas de compreender, organizar e compartilhar o conhecimento. Durante minha formação na UNESP, tive a oportunidade de trabalhar com acervos, especialmente fotográficos, e conhecer de perto os processos envolvidos na preservação, representação e acesso à informação.</p>
-          <p>Com o tempo, minha curiosidade acabou me levando a outros caminhos. O interesse pelas tecnologias e pelas possibilidades de criar soluções digitais me aproximou do Desenvolvimento de Software, área na qual decidi continuar minha formação. Hoje, encontro no código uma nova maneira de explorar ideias, resolver problemas e construir coisas.</p>
-          <p>Fora dos estudos, sou apaixonada por animais, gosto de me perder entre histórias de ficção e fantasia e tenho uma boa companhia nas playlists de música pop. Também gosto de paisagens, flores e fotografias que conseguem guardar um pouco da beleza dos momentos cotidianos.</p>
-          <p class="fecho">Acredito que boa parte de quem somos está nas coisas que escolhemos observar, aprender e guardar pelo caminho. Talvez seja por isso que minha trajetória tenha encontrado espaço entre livros, fotografias, informações e linhas de código.</p>
+          <p>Tudo começou na Biblioteconomia, onde aprendi na prática como organizar, preservar e dar acesso ao conhecimento. Na UNESP, tive a chance de trabalhar com acervos — principalmente fotográficos — e mergulhar em uma bagagem profunda sobre como a informação foi registrada e cuidada ao longo do tempo, dos suportes mais antigos aos mais atuais.</p>
+          <p>A curiosidade pelo mundo digital, no entanto, falou mais alto. O interesse por tecnologia e pela liberdade de construir ferramentas voltadas para as pessoas me levou ao Desenvolvimento de Software. Hoje, ainda no início dessa nova graduação, somo dois universos diferentes, mas igualmente ricos: a base sólida de quem já conhece a fundo a história da informação com a empolgação de quem está aprendendo a programar e dar os primeiros passos no código.</p>
+          <p>Longe do terminal e dos livros técnicos, meu tempo livre pertence aos animais, aos universos de ficção e fantasia e a boas playlists de pop. Também gosto de observar paisagens, flores e registrar em fotos os pequenos detalhes cotidianos que merecem ser lembrados.</p>
+          <p class="fecho">"Alguém tem que começar. Alguém tem que dar o primeiro passo e fazer o que é certo, porque é certo."  — Brandon Sanderson, O Caminho dos Reis</p>
         </div>
 
         <div class="carrossel" role="group" aria-roledescription="carrossel" aria-label="Fotografias pessoais">
           <div class="carrossel-trilho" tabindex="0">
-            <!-- Quando tiver a foto, troque o div de cada item por:
-            <img src="imagens/nome.jpg" alt="Descrição da foto" loading="lazy" class="proporcao-retrato"> -->
             <figure class="foto-registro carrossel-item">
               <img src="imagens/fotocachorro.jpeg" loading="lazy" class="foto-reservada proporcao-retrato">
-              <figcaption>fig. 01 — no parque com um cachorro simpático</figcaption>
+              <figcaption>fig. 01 </figcaption>
             </figure>
             <figure class="foto-registro carrossel-item">
               <img src="imagens/praia.jpeg" loading="lazy" class="foto-reservada proporcao-retrato">
-              <figcaption>fig. 02 — por do sol na praia</figcaption>
+              <figcaption>fig. 02 </figcaption>
             </figure>
             <figure class="foto-registro carrossel-item">
-              <div class="foto-reservada proporcao-retrato">Flores</div>
-              <figcaption>fig. 03 — legenda curta</figcaption>
-            </figure>
-            <figure class="foto-registro carrossel-item">
-              <div class="foto-reservada proporcao-retrato">Outro registro</div>
-              <figcaption>fig. 04 — legenda curta</figcaption>
+              <img src="imagens/leitura.jpeg" loading="lazy" class="foto-reservada proporcao-retrato"></img>
+              <figcaption>fig. 03 </figcaption>
             </figure>
           </div>
-
           <div class="carrossel-controles">
             <button type="button" class="carrossel-btn" data-direcao="-1" aria-label="Foto anterior">←</button>
             <span class="carrossel-contador" aria-live="polite">1 / 4</span>
@@ -96,13 +90,13 @@
         <div class="card-interesses">
           <h4>Interesses.</h4>
           <ol>
-            <li>Desenvolvimento web—Back-end.</li>
-            <li>Python</li>
-            <li>Banco de Dados</li>
-            <li>Metadados—Catalogação.</li>
-            <li>Bibliotecas.</li>
-            <li>Tesauros</li>
-            <li>Vocabulários Controlados</li>
+            <li>Desenvolvimento Back-end.</li>
+            <li>Banco de Dados.</li>
+            <li>Computação em Nuvem.</li>
+            <li>Linux.</li>
+            <li>Acessibilidade informacional.</li>
+            <li>Disseminação da informação.</li>
+            <li>Acervos não convencionais.</li>
           </ol>
         </div>
       </div>
