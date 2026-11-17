@@ -148,6 +148,12 @@ hr {
   background-color: var(--cor-destaque);
   color: #ffffff;
 }
+
+/* botão de currículo na página de informações curriculares */
+#curriculares .btn-curriculo {
+  margin: 28px 0 24px;
+}
+
 #apresentacao pre {
   display: block;
   align-self: center;
