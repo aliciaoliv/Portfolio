@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="script.js" defer></script>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
   <title>Alicia Cavalcante de Oliveira | Portfólio</title>
 </head>
 <body>
@@ -13,7 +13,7 @@
     <nav>
       <ul>
         <li><a href="index.html">Apresentação</a></li>
-        <li><a href="projetos API.html">Projetos API</a></li>
+        <li><a href="projetos-api.html">Projetos API</a></li>
         <li><a href="pe-pro.html">Projetos profissionais e pessoais</a></li>
         <li><a href="curriculares.html">Informações Curriculares</a></li>
         <li><a href="contato.html">Contato</a></li>
@@ -31,7 +31,7 @@
         <h1>Alicia Cavalcante de Oliveira</h1>
         <h2>Entre a organização da informação e o desenvolvimento de software</h2>
         <p class="bio">Minha trajetória acadêmica e profissional conecta Biblioteconomia e Desenvolvimento de Software. Transito entre a gestão de informações, o tratamento de dados e o desenvolvimento de aplicações, buscando compreender como diferentes conhecimentos e tecnologias podem contribuir para a criação de soluções digitais.</p>
-        <a href="projetos API.html" class="btn-projetos">Ver projetos</a>
+        <a href="projetos-api.html" class="btn-projetos">Ver projetos</a>
         <a href="documentos/curriculo-alicia-cavalcante.pdf" class="btn-curriculo" download>Baixar currículo</a>
       </div>
       <pre><code>def perfil(palavra):
@@ -41,7 +41,7 @@
     return False </code></pre>
     </section>
     <hr>
-        <section id="sobre-mim" class="sobre-mim">
+    <section id="sobre-mim" class="sobre-mim">
       <h2 class="sobre-mim-titulo">Sobre mim</h2>
 
       <div class="sobre-mim-conteudo">
@@ -55,21 +55,21 @@
         <div class="carrossel" role="group" aria-roledescription="carrossel" aria-label="Fotografias pessoais">
           <div class="carrossel-trilho" tabindex="0">
             <figure class="foto-registro carrossel-item">
-              <img src="imagens/fotocachorro.jpeg" loading="lazy" class="foto-reservada proporcao-retrato">
+              <img src="imagens/fotocachorro.jpeg" alt="Foto com um cachorro" loading="lazy" class="proporcao-retrato">
               <figcaption>fig. 01 </figcaption>
             </figure>
             <figure class="foto-registro carrossel-item">
-              <img src="imagens/praia.jpeg" loading="lazy" class="foto-reservada proporcao-retrato">
+              <img src="imagens/praia.jpeg" alt="Foto de uma praia" loading="lazy" class="proporcao-retrato">
               <figcaption>fig. 02 </figcaption>
             </figure>
             <figure class="foto-registro carrossel-item">
-              <img src="imagens/leitura.jpeg" loading="lazy" class="foto-reservada proporcao-retrato"></img>
+              <img src="imagens/leitura.jpeg" alt="Foto de leitura" loading="lazy" class="proporcao-retrato">
               <figcaption>fig. 03 </figcaption>
             </figure>
           </div>
           <div class="carrossel-controles">
             <button type="button" class="carrossel-btn" data-direcao="-1" aria-label="Foto anterior">←</button>
-            <span class="carrossel-contador" aria-live="polite">1 / 4</span>
+            <span class="carrossel-contador" aria-live="polite">1 / 3</span>
             <button type="button" class="carrossel-btn" data-direcao="1" aria-label="Próxima foto">→</button>
           </div>
         </div>
@@ -103,6 +103,7 @@
     </section>
   </main>
   <footer>
+    <p class="copyright">© 2026 Alicia Cavalcante de Oliveira</p>
   </footer>
 </body>
 </html>

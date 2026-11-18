@@ -4,6 +4,8 @@ document.querySelectorAll('.carrossel').forEach((carrossel) => {
   const contador = carrossel.querySelector('.carrossel-contador');
   const botoes = carrossel.querySelectorAll('.carrossel-btn');
 
+  contador.textContent = `1 / ${itens.length}`;
+
   // distância entre o início de uma foto e o da seguinte
   const passo = () =>
     itens.length > 1 ? itens[1].offsetLeft - itens[0].offsetLeft : trilho.clientWidth;

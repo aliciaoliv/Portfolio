@@ -8,6 +8,8 @@
   --cor-codigo: #E5C4AE;           
   --cor-borda: #D4C5B3;            
   --cor-linhas-divisorias: #C2B29F;
+  --cor-texto-claro: #ffffff;
+  --cor-texto-suave: #666666;
   --fonte-serifa: "Georgia", "Times New Roman", serif;
   --fonte-mono: "Courier New", Courier, monospace;
 }
@@ -55,7 +57,7 @@ header nav ul {
 header nav a {
   display: inline-block;           
   text-decoration: none;
-  color: #ffffff;
+  color: var(--cor-texto-claro);
   background-color: var(--cor-destaque);
   padding: 6px 16px;
   border-radius: 20px;
@@ -71,7 +73,7 @@ header nav a.active {
   background-color: var(--cor-destaque-escuro);
 }
 
-/* linha divisória geral (a da página de projetos continua valendo) */
+/* linha divisória geral, usada em todas as páginas */
 hr {
   border: 0;
   border-top: 1px solid var(--cor-linhas-divisorias);
@@ -112,7 +114,8 @@ hr {
   margin-bottom: 26px;
 }
 
-.btn-projetos {
+.btn-projetos,
+.btn-curriculo {
   display: inline-block;
   background-color: transparent;
   color: var(--cor-destaque);
@@ -125,28 +128,14 @@ hr {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.btn-projetos:hover {
+.btn-projetos:hover,
+.btn-curriculo:hover {
   background-color: var(--cor-destaque);
-  color: #ffffff;
+  color: var(--cor-texto-claro);
 }
 
 .btn-curriculo {
-  display: inline-block;
   margin-left: 12px;
-  background-color: transparent;
-  color: var(--cor-destaque);
-  border: 1px solid var(--cor-destaque);
-  text-decoration: none;
-  font-family: var(--fonte-mono);
-  font-size: 0.9rem;
-  padding: 11px 25px;
-  border-radius: 999px;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.btn-curriculo:hover {
-  background-color: var(--cor-destaque);
-  color: #ffffff;
 }
 
 /* botão de currículo na página de informações curriculares */
@@ -249,21 +238,7 @@ hr {
   margin-top: 8px;
   font-family: var(--fonte-mono);
   font-size: 0.75rem;
-  color: #666;
-}
-
-/* espaço reservado até as fotos chegarem */
-.foto-reservada {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 12px;
-  text-align: center;
-  font-family: var(--fonte-mono);
-  font-size: 0.8rem;
-  background-color: var(--cor-fundo-pagi);
-  border: 1px dashed var(--cor-linhas-divisorias);
+  color: var(--cor-texto-suave);
 }
 
 .proporcao-retrato {
@@ -307,7 +282,7 @@ hr {
   border: 0;
   border-radius: 50%;
   background-color: var(--cor-destaque);
-  color: #ffffff;
+  color: var(--cor-texto-claro);
   font-family: var(--fonte-mono);
   font-size: 1rem;
   cursor: pointer;
@@ -329,30 +304,6 @@ hr {
   font-size: 0.8rem;
 }
 
-
-@media (max-width: 820px) {
-  .sobre-mim-conteudo {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .carrossel {
-    max-width: 420px;
-  }
-}
-
-#projetos-api h1 {
-  font-size: 1.5rem;
-  font-weight: normal;
-  margin-bottom: 10px;
-  font-family: var(--fonte-mono);
-}
-
-#projetos-api hr {
-  border: 0;
-  border-top: 1px solid var(--cor-linhas-divisorias);
-  margin-bottom: 30px;
-}
 
 .grid-projetos {
   display: grid;
@@ -391,13 +342,21 @@ hr {
   margin-bottom: 6px;
 }
 
-.ficha-corpo .titulo-descricao {
+.ficha-corpo .titulo-descricao,
+.ficha-corpo .local-publicacao,
+.ficha-corpo .resumo-projeto,
+.ficha-corpo .detalhes-fisicos,
+.ficha-corpo .nota-projeto {
   text-indent: 15px;
 }
 
-.ficha-corpo .local-publicacao,
-.ficha-corpo .detalhes-fisicos {
-  text-indent: 15px;
+/* títulos de bloco na ficha de informações curriculares */
+.ficha-corpo .bloco-titulo {
+  margin-top: 18px;
+}
+
+.ficha-corpo .bloco-titulo:first-child {
+  margin-top: 0;
 }
 
 .ficha-corpo .link-projeto {
@@ -432,7 +391,7 @@ hr {
   justify-content: space-between;
   align-items: flex-end;
   font-size: 0.75rem;
-  color: #666;
+  color: var(--cor-texto-suave);
   position: relative;
   padding-top: 10px;
 }
@@ -467,7 +426,7 @@ footer {
 
 footer .texto-decorativo {
   background-color: var(--cor-destaque);
-  color: #EFE7DC;
+  color: var(--cor-fundo-cartao);
   padding: 15px;
   font-size: 0.75rem;
   line-height: 1.4;
@@ -480,47 +439,6 @@ footer .copyright {
   font-size: 0.8rem;
   color: var(--cor-destaque);
   font-family: var(--fonte-mono);
-}
-
-@media (max-width: 1100px) {
-  #apresentacao {
-    grid-template-columns: 280px 1fr;
-  }
-
-  #apresentacao pre {
-    grid-column: 2;
-  }
-}
-
-@media (max-width: 820px) {
-  #apresentacao {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  #apresentacao pre {
-    grid-column: auto;
-  }
-  }
-
-  #apresentacao figure {
-    max-width: 260px;
-  }
-
-  .informacoes-rapidas {
-    grid-template-columns: 1fr;
-  }
-}
-
-#contato h1 {
-  font-size: 1.5rem;
-  font-weight: normal;
-  margin-bottom: 10px;
-  font-family: var(--fonte-mono);
-}
-
-#contato hr {
-  border: 0;
-  border-top: 1px solid var(--cor-linhas-divisorias);
-  margin: 0 0 30px;
 }
 
 .contato-conteudo {
@@ -566,4 +484,42 @@ footer .copyright {
 
 .email-contato:hover {
   color: var(--cor-destaque);
+}
+
+@media (max-width: 1100px) {
+  #apresentacao {
+    grid-template-columns: 280px 1fr;
+  }
+
+  #apresentacao pre {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 820px) {
+  #apresentacao {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  #apresentacao pre {
+    grid-column: auto;
+  }
+
+  #apresentacao figure {
+    max-width: 260px;
+  }
+
+  .informacoes-rapidas {
+    grid-template-columns: 1fr;
+  }
+
+  .sobre-mim-conteudo {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .carrossel {
+    max-width: 420px;
+  }
 }
